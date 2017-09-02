@@ -12,7 +12,7 @@ The goals / steps of this project are the following:
 [//]: # (Image References)
 [image1]: ./output_images/example_images.png
 [image2]: ./output_images/example_hogs.png
-[image3]: ./output_images/out_image.png
+[image3]: ./output_images/out_img.png
 [image4]: ./output_images/final_heat.png
 [video1]: ./project_video.mp4
 
@@ -55,7 +55,7 @@ I trained a linear SVM using both color and HOG features with `hog_channel = 'AL
 
 ####1. Describe how (and identify where in your code) you implemented a sliding window search.  How did you decide what scales to search and how much to overlap windows?
 
-For video processing, I used dynamic window search (check function `vehicleDetection()` in the code cell [] for details). Generally speaking, I search the two sides of the camera using large windows as they are where new cars could appear. If there are no cars detected at this moment, I also slide windows with smaller sizes over the possible area in front of the ego-car for 10 frames. After 10 frames if a car is detected, I will only search a small area around this car, which greatly decreases the computation and false positives. 
+For video processing, I used dynamic window search (check function `vehicleDetection()` in the code cell [684] for details). Generally speaking, I search the two sides of the camera using large windows as they are where new cars could appear. If there are no cars detected at this moment, I also slide windows with smaller sizes over the possible area in front of the ego-car for 10 frames. After 10 frames if a car is detected, I will only search a small area around this car, which greatly decreases the computation and false positives. 
 
 I used `cells_per_step=2` for 4 different scales of windows.
 
