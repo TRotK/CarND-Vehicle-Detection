@@ -92,7 +92,7 @@ Here I'll talk about the approach I took, what techniques I used, what worked an
 
 Firstly, the approach assumes the highway situations, where the positions of new cars are very predictable. So, I only detect the new cars from two sides then lock them. This would likely fail in some urban situations such as crossroads.
 
-In addition, it can be seen that the detector mistakenly detects some cars from other sides of the road which won't cause any problem, but is unnecessary. If the detector can be combined with curb／road divider detection using camera or other sensor, once a car is on the left-most lane of highway, a lot of useless search can be saved. 
+In addition, it can be seen that the detector mistakenly detects some cars from other sides of the road which won't cause any problem, but is unnecessary. If the detector can be combined with curb／road divider detection using camera or other sensors, once a car is on the left-most lane of highway, a lot of useless search can be saved. 
 
 Finally, I spent a lot of time on getting rid of false positives. SVM with HOG is a simple and old-fashion way for object detection, hence not very robust. DPM and deep-learning-based approaches would be worth it to investigate if I were going to pursue the project further, and they could be quite helpful for minimization of false positives and robustness in more difficult road situations.
 
